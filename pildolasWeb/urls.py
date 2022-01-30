@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from pildorasWebApp import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='Home'),
+    path('services/', views.services, name='Services'),
+    path('marketplace/', views.marketplace, name='Marketplace'),
+    path('blog/', views.blog, name='Blog'),
+    path('contact/', views.home, name='Contact'),
 ]
